@@ -5,27 +5,30 @@ import hoodieImg from "@/assets/prod-hoodie.jpg";
 import printImg from "@/assets/prod-print.jpg";
 import accImg from "@/assets/prod-acc.jpg";
 import webshopImg from "@/assets/webshop-fulfillment.jpg";
+import morchWordmark from "@/assets/morch-wordmark.png.asset.json";
+import morchMark from "@/assets/morch-mark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RIOT PRESS — Zenekari merch nyomda" },
+      { title: "MÖRCH — Zenekari merch & streetwear" },
       {
         name: "description",
         content:
-          "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak. Kis példányszámtól, gyors átfutással.",
+          "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak. Authentic streetwear & music culturals.",
       },
-      { property: "og:title", content: "RIOT PRESS — Zenekari merch nyomda" },
+      { property: "og:title", content: "MÖRCH — Zenekari merch & streetwear" },
       {
         property: "og:description",
         content:
-          "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak.",
+          "Authentic streetwear & music culturals. Pólók, hoodie-k, plakátok, kiegészítők zenekaroknak.",
       },
       { property: "og:image", content: heroImg },
     ],
   }),
   component: Index,
 });
+
 
 const products = [
   {
@@ -71,9 +74,11 @@ function Index() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-          <a href="#top" className="font-display text-2xl tracking-wider glitch">
-            RIOT<span className="text-primary">/</span>PRESS
+          <a href="#top" className="flex items-center gap-2 glitch">
+            <img src={morchMark.url} alt="" className="h-8 w-auto" />
+            <img src={morchWordmark.url} alt="MÖRCH" className="h-6 w-auto hidden sm:block" />
           </a>
+
           <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase">
             <a href="#termekek" className="hover:text-primary transition">Termékek</a>
             <a href="#folyamat" className="hover:text-primary transition">Folyamat</a>
@@ -99,7 +104,7 @@ function Index() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="font-mono text-xs uppercase text-accent mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-accent" />
-            EST. 2014 · BUDAPEST · DIY OR DIE
+            EST. 2014 · BUDAPEST · AUTHENTIC STREETWEAR & MUSIC CULTURALS
           </div>
           <h1 className="font-display text-[clamp(3.5rem,11vw,11rem)] leading-[0.85] uppercase">
             Merch, ami<br />
@@ -297,7 +302,7 @@ function Index() {
 
           <div className="grid md:grid-cols-2 gap-px bg-border">
             <article className="bg-background p-8 md:p-10">
-              <div className="font-display text-5xl md:text-6xl text-primary mb-4">RIOT SHOP</div>
+              <div className="font-display text-5xl md:text-6xl text-primary mb-4">MÖRCH SHOP</div>
               <h3 className="font-display text-2xl uppercase mb-3">A mi webshopunk</h3>
               <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
                 Próbanyomások, kis példányszámú dropok, maradék tour-merch és
@@ -307,7 +312,7 @@ function Index() {
                 {[
                   "Limitált dropok & maradék stock",
                   "Azonnali szállítás raktárról",
-                  "Exkluzív Riot/Press design-ok",
+                  "Exkluzív MÖRCH design-ok",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-primary mt-1">▸</span>
@@ -378,12 +383,12 @@ function Index() {
           </div>
           <div className="space-y-6 font-mono">
             <a
-              href="mailto:hello@riotpress.hu"
+              href="mailto:hello@morch.hu"
               className="block group border-y border-primary-foreground/30 py-6"
             >
               <div className="text-xs uppercase opacity-70">Email</div>
               <div className="font-display text-4xl md:text-5xl group-hover:text-accent transition">
-                hello@riotpress.hu
+                hello@morch.hu
               </div>
             </a>
             <a
@@ -405,7 +410,7 @@ function Index() {
       {/* FOOTER */}
       <footer className="border-t border-border py-10">
         <div className="mx-auto max-w-7xl px-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs uppercase text-muted-foreground">
-          <div>© {new Date().getFullYear()} Riot/Press Kft. — Minden jog a zenekaroké.</div>
+          <div>© {new Date().getFullYear()} MÖRCH Kft. — Minden jog a zenekaroké.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary">Instagram</a>
             <a href="#" className="hover:text-primary">Facebook</a>
