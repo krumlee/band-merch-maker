@@ -78,6 +78,7 @@ function Index() {
             <a href="#termekek" className="hover:text-primary transition">Termékek</a>
             <a href="#folyamat" className="hover:text-primary transition">Folyamat</a>
             <a href="#rolunk" className="hover:text-primary transition">Rólunk</a>
+            <a href="#webshop" className="hover:text-primary transition">Webshop</a>
             <a href="#kapcsolat" className="hover:text-primary transition">Kapcsolat</a>
           </nav>
           <a
