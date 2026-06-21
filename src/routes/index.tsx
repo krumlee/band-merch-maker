@@ -104,7 +104,7 @@ function Index() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="font-mono text-xs uppercase text-accent mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-accent" />
-            EST. 2014 · BUDAPEST · DIY OR DIE
+            EST. 2014 · BUDAPEST · AUTHENTIC STREETWEAR & MUSIC CULTURALS
           </div>
           <h1 className="font-display text-[clamp(3.5rem,11vw,11rem)] leading-[0.85] uppercase">
             Merch, ami<br />
@@ -302,7 +302,7 @@ function Index() {
 
           <div className="grid md:grid-cols-2 gap-px bg-border">
             <article className="bg-background p-8 md:p-10">
-              <div className="font-display text-5xl md:text-6xl text-primary mb-4">RIOT SHOP</div>
+              <div className="font-display text-5xl md:text-6xl text-primary mb-4">MÖRCH SHOP</div>
               <h3 className="font-display text-2xl uppercase mb-3">A mi webshopunk</h3>
               <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
                 Próbanyomások, kis példányszámú dropok, maradék tour-merch és
@@ -312,7 +312,7 @@ function Index() {
                 {[
                   "Limitált dropok & maradék stock",
                   "Azonnali szállítás raktárról",
-                  "Exkluzív Riot/Press design-ok",
+                  "Exkluzív MÖRCH design-ok",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-primary mt-1">▸</span>
@@ -383,12 +383,12 @@ function Index() {
           </div>
           <div className="space-y-6 font-mono">
             <a
-              href="mailto:hello@riotpress.hu"
+              href="mailto:hello@morch.hu"
               className="block group border-y border-primary-foreground/30 py-6"
             >
               <div className="text-xs uppercase opacity-70">Email</div>
               <div className="font-display text-4xl md:text-5xl group-hover:text-accent transition">
-                hello@riotpress.hu
+                hello@morch.hu
               </div>
             </a>
             <a
@@ -410,7 +410,7 @@ function Index() {
       {/* FOOTER */}
       <footer className="border-t border-border py-10">
         <div className="mx-auto max-w-7xl px-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs uppercase text-muted-foreground">
-          <div>© {new Date().getFullYear()} Riot/Press Kft. — Minden jog a zenekaroké.</div>
+          <div>© {new Date().getFullYear()} MÖRCH Kft. — Minden jog a zenekaroké.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary">Instagram</a>
             <a href="#" className="hover:text-primary">Facebook</a>
