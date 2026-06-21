@@ -5,27 +5,30 @@ import hoodieImg from "@/assets/prod-hoodie.jpg";
 import printImg from "@/assets/prod-print.jpg";
 import accImg from "@/assets/prod-acc.jpg";
 import webshopImg from "@/assets/webshop-fulfillment.jpg";
+import morchWordmark from "@/assets/morch-wordmark.png.asset.json";
+import morchMark from "@/assets/morch-mark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RIOT PRESS — Zenekari merch nyomda" },
+      { title: "MÖRCH — Zenekari merch & streetwear" },
       {
         name: "description",
         content:
-          "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak. Kis példányszámtól, gyors átfutással.",
+          "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak. Authentic streetwear & music culturals.",
       },
-      { property: "og:title", content: "RIOT PRESS — Zenekari merch nyomda" },
+      { property: "og:title", content: "MÖRCH — Zenekari merch & streetwear" },
       {
         property: "og:description",
         content:
-          "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak.",
+          "Authentic streetwear & music culturals. Pólók, hoodie-k, plakátok, kiegészítők zenekaroknak.",
       },
       { property: "og:image", content: heroImg },
     ],
   }),
   component: Index,
 });
+
 
 const products = [
   {
