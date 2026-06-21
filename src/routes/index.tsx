@@ -278,6 +278,86 @@ function Index() {
         </div>
       </section>
 
+      {/* WEBSHOP + FULFILLMENT */}
+      <section id="webshop" className="relative py-28 border-y border-border bg-surface overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none hidden lg:block">
+          <img src={webshopImg} alt="" className="w-full h-full object-cover grayscale" width={1200} height={900} />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
+          <div className="font-mono text-xs uppercase text-primary mb-3">/ 04 — Webshop & Fulfillment</div>
+          <h2 className="font-display text-6xl md:text-8xl uppercase leading-none mb-6">
+            Van saját boltunk.<br />
+            <span className="text-accent">Neked is csinálunk.</span>
+          </h2>
+          <p className="font-mono text-sm text-muted-foreground max-w-2xl leading-relaxed mb-16">
+            Ha csak gyártatni akarsz, rendben. Ha viszont szeretnéd, hogy a rajongók
+            közvetlenül tőled rendeljenek — mi építjük a webshopot, tároljuk a
+            cuccot, csomagoljuk és postázzuk.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-px bg-border">
+            <article className="bg-background p-8 md:p-10">
+              <div className="font-display text-5xl md:text-6xl text-primary mb-4">RIOT SHOP</div>
+              <h3 className="font-display text-2xl uppercase mb-3">A mi webshopunk</h3>
+              <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
+                Próbanyomások, kis példányszámú dropok, maradék tour-merch és
+                kollab-cuccok. Itt mindig találsz valami limitáltat.
+              </p>
+              <ul className="space-y-3 font-mono text-sm text-muted-foreground mb-8">
+                {[
+                  "Limitált dropok & maradék stock",
+                  "Azonnali szállítás raktárról",
+                  "Exkluzív Riot/Press design-ok",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-primary mt-1">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#kapcsolat"
+                className="inline-block font-mono text-xs uppercase border border-foreground px-6 py-3 hover:bg-foreground hover:text-background transition"
+              >
+                Nézd meg a boltot →
+              </a>
+            </article>
+
+            <article className="bg-background p-8 md:p-10 relative">
+              <span className="absolute top-6 right-6 font-mono text-[10px] uppercase bg-accent text-accent-foreground px-2 py-1">
+                FULL SERVICE
+              </span>
+              <div className="font-display text-5xl md:text-6xl text-accent mb-4">SHOP FOR YOU</div>
+              <h3 className="font-display text-2xl uppercase mb-3">Saját webshop + fulfillment</h3>
+              <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
+                Komplett webshop a zenekarodnak: termékek, készletkezelés,
+                fizetés, csomagolás, szállítás, visszaküldés-kezelés. Te csak a
+                zenére koncentrálsz.
+              </p>
+              <ul className="space-y-3 font-mono text-sm text-muted-foreground mb-8">
+                {[
+                  "Egyedi webshop design a merchhez illesztve",
+                  "Raktározás és készletkezelés",
+                  "Csomagolás, postázás, track & trace",
+                  "Visszaküldés és ügyfélszolgálat",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-accent mt-1">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#kapcsolat"
+                className="inline-block font-mono text-xs uppercase bg-primary text-primary-foreground px-6 py-3 hover:bg-accent hover:text-accent-foreground transition"
+              >
+                Kérj webshop ajánlatot →
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* CTA / KAPCSOLAT */}
       <section
         id="kapcsolat"
@@ -286,7 +366,7 @@ function Index() {
         <div className="absolute -top-10 -right-10 w-72 h-72 stripes opacity-20" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12">
           <div>
-            <div className="font-mono text-xs uppercase mb-4">/ 04 — Kapcsolat</div>
+            <div className="font-mono text-xs uppercase mb-4">/ 05 — Kapcsolat</div>
             <h2 className="font-display text-6xl md:text-8xl uppercase leading-[0.9]">
               Van zenekarod?<br />
               <span className="text-accent">Írj nekünk.</span>
