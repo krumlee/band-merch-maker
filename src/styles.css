@@ -36,12 +36,12 @@
   --surface-2: oklch(0.22 0.01 30);
   --muted: oklch(0.28 0.01 30);
   --muted-foreground: oklch(0.7 0.02 80);
-  --primary: oklch(0.62 0.22 25);          /* #e63946 red */
+  --primary: oklch(0.7333 0.6661 34.66);   /* #e50326 logo red */
   --primary-foreground: oklch(0.98 0.01 90);
   --accent: oklch(0.86 0.17 92);           /* #f4d03f yellow */
   --accent-foreground: oklch(0.14 0 0);
   --border: oklch(0.28 0.01 30);
-  --ring: oklch(0.62 0.22 25);
+  --ring: oklch(0.7333 0.6661 34.66);      /* #e50326 logo red */
 
   --grain: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
 }
