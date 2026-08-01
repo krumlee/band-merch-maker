@@ -76,9 +76,9 @@ function Index() {
             <img
               src={moerchLogoAsset.url}
               alt="Mörch"
-              className="h-[45px] w-auto"
-              width={64}
-              height={45}
+              className="h-[50px] w-auto"
+              width={71}
+              height={50}
             />
           </a>
           <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase">
