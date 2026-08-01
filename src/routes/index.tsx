@@ -5,6 +5,7 @@ import hoodieImg from "@/assets/prod-hoodie.jpg";
 import printImg from "@/assets/prod-print.jpg";
 import accImg from "@/assets/prod-acc.jpg";
 import webshopImg from "@/assets/webshop-fulfillment.jpg";
+import moerchLogoAsset from "@/assets/moerch-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -71,8 +72,14 @@ function Index() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-          <a href="#top" className="font-display text-2xl tracking-wider glitch">
-            RIOT<span className="text-primary">/</span>PRESS
+          <a href="#top" className="flex items-center">
+            <img
+              src={moerchLogoAsset.url}
+              alt="Mörch"
+              className="h-8 w-auto"
+              width={200}
+              height={40}
+            />
           </a>
           <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase">
             <a href="#termekek" className="hover:text-primary transition">Termékek</a>
