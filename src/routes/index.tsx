@@ -75,8 +75,8 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2 glitch">
-            <img src={morchMark.url} alt="" className="h-8 w-auto" />
-            <img src={morchWordmark.url} alt="MÖRCH" className="h-6 w-auto hidden sm:block" />
+            <img src={morchLogo.url} alt="MÖRCH" className="h-7 w-auto" />
+
           </a>
 
           <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase">
