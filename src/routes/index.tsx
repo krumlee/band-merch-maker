@@ -5,8 +5,8 @@ import hoodieImg from "@/assets/prod-hoodie.jpg";
 import printImg from "@/assets/prod-print.jpg";
 import accImg from "@/assets/prod-acc.jpg";
 import webshopImg from "@/assets/webshop-fulfillment.jpg";
-import morchWordmark from "@/assets/morch-wordmark.png.asset.json";
-import morchMark from "@/assets/morch-mark.png.asset.json";
+import morchLogo from "@/assets/morch-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
