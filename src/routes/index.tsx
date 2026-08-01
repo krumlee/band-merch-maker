@@ -5,6 +5,7 @@ import hoodieImg from "@/assets/prod-hoodie.jpg";
 import printImg from "@/assets/prod-print.jpg";
 import accImg from "@/assets/prod-acc.jpg";
 import webshopImg from "@/assets/webshop-fulfillment.jpg";
+import moerchLogoAsset from "@/assets/moerch-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
