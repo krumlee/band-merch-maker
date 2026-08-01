@@ -1,7 +1,0 @@
-# MÖRCH
-
-> Zenekari merch, streetwear és fulfillment szolgáltatás Budapesten. Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak, kis példányszámtól.
-
-## Pages
-
-- [/](/): Főoldal — termékkategóriák, gyártási folyamat, a MÖRCH csapat bemutatkozása, saját webshop és fulfillment ajánlat, valamint kapcsolati adatok.
