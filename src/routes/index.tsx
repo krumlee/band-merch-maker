@@ -5,18 +5,18 @@ import hoodieImg from "@/assets/prod-hoodie.jpg";
 import printImg from "@/assets/prod-print.jpg";
 import accImg from "@/assets/prod-acc.jpg";
 import webshopImg from "@/assets/webshop-fulfillment.jpg";
-import moerchLogoAsset from "@/assets/moerch-logo.png.asset.json";
+import moerchLogoAsset from "@/assets/morch-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RIOT PRESS — Zenekari merch nyomda" },
+      { title: "MÖRCH" },
       {
         name: "description",
         content:
           "Pólók, hoodie-k, plakátok, matricák, öngyújtók és kiegészítők zenekaroknak. Kis példányszámtól, gyors átfutással.",
       },
-      { property: "og:title", content: "RIOT PRESS — Zenekari merch nyomda" },
+      { property: "og:title", content: "MÖRCH" },
       {
         property: "og:description",
         content:
@@ -32,9 +32,9 @@ const products = [
   {
     n: "01",
     title: "Pólók & Longsleeve",
-    desc: "Nehéz pamut, szita- és DTG-nyomás. Egyedi szabás, címkecsere, full-print.",
+    desc: "Nehéz pamut, szita- és DTF és DTG-nyomás. Egyedi szabás, egyedi címke.",
     img: tshirtImg,
-    tags: ["szitanyomás", "DTG", "címkecsere"],
+    tags: ["szitanyomás", "DTF", "DTG", "egyedi címke"],
   },
   {
     n: "02",
@@ -46,7 +46,7 @@ const products = [
   {
     n: "03",
     title: "Nyomdai anyagok",
-    desc: "Koncertplakát, flyer, matrica, lemezborító, jegyek. Riso, ofszet, digitális.",
+    desc: "Koncertplakát, flyer, matrica, lemezborító, jegyek.",
     img: printImg,
     tags: ["poszter", "matrica", "riso"],
   },
@@ -55,15 +55,15 @@ const products = [
     title: "Kiegészítők",
     desc: "Öngyújtó, jelvény, kulcstartó, sörnyitó, törölköző, vászontáska — minden, ami fan-cucc.",
     img: accImg,
-    tags: ["zippo", "pin", "tote"],
+    tags: ["zippo", "pin", "tote", "kulcstartó", "törölköző", "sörnyitó", "matrica"],
   },
 ];
 
 const steps = [
-  ["BRIEF", "Küldd a grafikát vagy az ötletet. Mi rárakjuk a kezünk."],
+  ["BRIEF", "Küldd a kész grafikát vagy az ötletet. Mi rárakjuk a kezünk."],
   ["MOCKUP", "48 órán belül kapsz látványtervet és árajánlatot."],
   ["GYÁRTÁS", "10–14 munkanap, kis példányszámtól (25 db) indulunk."],
-  ["SZÁLLÍTÁS", "Házhoz, próbára, vagy egyenesen a koncert backstage-ébe."],
+  ["SZÁLLÍTÁS & ÁRUSÍTÁS", "Házhoz, vagy egyenesen a koncert backstagebe. Hogyha szeretnéd, mi árusítunk helyetted."],
 ];
 
 function Index() {
@@ -74,7 +74,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center">
             <img
-              src={moerchLogoAsset.url}
+              src={moerchLogoAsset}
               alt="Mörch"
               className="h-[50px] w-auto"
               width={71}
@@ -258,21 +258,20 @@ function Index() {
           <div className="md:col-span-5">
             <div className="font-mono text-xs uppercase text-primary mb-3">/ 03 — Rólunk</div>
             <h2 className="font-display text-6xl md:text-7xl uppercase leading-none">
-              Klub-pincéből<br />
+              Mi is a klub pincéből<br />
               <span className="text-accent">indultunk.</span>
             </h2>
           </div>
           <div className="md:col-span-7 space-y-6 font-mono text-sm leading-relaxed text-muted-foreground">
             <p>
-              2014-ben két basszusgitáros és egy szitakeret. Ma egy 12 fős
-              csapat, saját nyomda, saját raktár — és még mindig minden
-              megrendelést úgy kezelünk, mintha a saját zenekarunknak
-              csinálnánk.
+              Zenészként pontosan tudjuk, hogy a merch több egyszerű termékeknél — ugyanúgy a zenekar része, mint egy borító, egy koncertplakát vagy maga a színpadi megjelenés. 
+              Ezért minden rendelésnél az a cél, hogy olyan minőségi merch készüljön, 
+              amit jó érzés kirakni a pultra, büszkén lehet képviselni, és a közönség is szívesen visz haza.
+
             </p>
             <p>
-              Dolgoztunk hardcore zenekarokkal, indie szólókkal, fesztiválokkal
-              és kiadókkal. Nem keverünk össze 50 ezer fős brand-cuccal: ezt
-              tudjuk, ezt szeretjük.
+             Mindegy, hogy az első 30 pólóról vagy egy fesztivál teljes merchéről van szó. 
+             Nálunk nincs kis vagy nagy projekt — minden rendelés ugyanazt a figyelmet kapja.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
               {["DIY", "FAIR ÁR", "NO BS"].map((w) => (
@@ -304,7 +303,7 @@ function Index() {
 
           <div className="grid md:grid-cols-2 gap-px bg-border">
             <article className="bg-background p-8 md:p-10">
-              <div className="font-display text-5xl md:text-6xl text-primary mb-4">RIOT SHOP</div>
+              <div className="font-display text-5xl md:text-6xl text-primary mb-4">MÖRCH SHOP</div>
               <h3 className="font-display text-2xl uppercase mb-3">A mi webshopunk</h3>
               <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
                 Próbanyomások, kis példányszámú dropok, maradék tour-merch és
@@ -314,7 +313,6 @@ function Index() {
                 {[
                   "Limitált dropok & maradék stock",
                   "Azonnali szállítás raktárról",
-                  "Exkluzív Riot/Press design-ok",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-primary mt-1">▸</span>
@@ -347,6 +345,7 @@ function Index() {
                   "Raktározás és készletkezelés",
                   "Csomagolás, postázás, track & trace",
                   "Visszaküldés és ügyfélszolgálat",
+                  "Pontos elszámolás és riportok",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-accent mt-1">▸</span>
@@ -385,26 +384,23 @@ function Index() {
           </div>
           <div className="space-y-6 font-mono">
             <a
-              href="mailto:hello@riotpress.hu"
+              href="mailto:info@morch.hu"
               className="block group border-y border-primary-foreground/30 py-6"
             >
               <div className="text-xs uppercase opacity-70">Email</div>
               <div className="font-display text-4xl md:text-5xl group-hover:text-accent transition">
-                hello@riotpress.hu
+                info@morch.hu
               </div>
             </a>
             <a
-              href="tel:+36301234567"
+              href="tel:+36303427281"
               className="block group border-b border-primary-foreground/30 py-6"
             >
               <div className="text-xs uppercase opacity-70">Telefon</div>
               <div className="font-display text-4xl md:text-5xl group-hover:text-accent transition">
-                +36 30 123 4567
+                +36 30 342 7281
               </div>
             </a>
-            <div className="text-xs uppercase opacity-70 pt-2">
-              H–P · 10:00–18:00 · Budapest, VIII. ker.
-            </div>
           </div>
         </div>
       </section>
@@ -412,11 +408,16 @@ function Index() {
       {/* FOOTER */}
       <footer className="border-t border-border py-10">
         <div className="mx-auto max-w-7xl px-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs uppercase text-muted-foreground">
-          <div>© {new Date().getFullYear()} Riot/Press Kft. — Minden jog a zenekaroké.</div>
+          <div>© {new Date().getFullYear()} MÖRCH </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary">Instagram</a>
-            <a href="#" className="hover:text-primary">Facebook</a>
-            <a href="#" className="hover:text-primary">Bandcamp</a>
+            <a
+              href="https://www.instagram.com/morch_lab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </footer>
