@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import faviconUrl from "../assets/morch-logo-o.png?url";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -88,6 +89,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: faviconUrl,
+      },
       {
         rel: "stylesheet",
         href: appCss,
