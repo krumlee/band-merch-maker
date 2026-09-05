@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import favicon16Url from "../assets/favicon-16x16.png?url";
+import favicon32Url from "../assets/favicon-32x32.png?url";
 import faviconUrl from "../assets/morch-logo-o.png?url";
 import appCss from "../styles.css?url";
 
@@ -92,6 +94,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "icon",
         type: "image/png",
+        sizes: "16x16",
+        href: favicon16Url,
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: favicon32Url,
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
         href: faviconUrl,
       },
       {
