@@ -9,7 +9,8 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     tanstackStart({ server: { entry: "server" } }),
-    nitro(),
+    // Keep SSR helpers with their consumers to avoid circular chunk initialization.
+    nitro({ inlineDynamicImports: true }),
     viteReact(),
   ],
 });
