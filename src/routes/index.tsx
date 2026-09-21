@@ -1,3 +1,4 @@
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-merch.jpg";
 import tshirtImg from "@/assets/prod-tshirt.jpg";
@@ -32,16 +33,16 @@ const products = [
   {
     n: "01",
     title: "Pólók & Longsleeve",
-    desc: "Nehéz pamut, szita- és DTF és DTG-nyomás. Egyedi szabás, egyedi címke.",
+    desc: "100% pamut, szita, DTF és DTG-nyomás. Egyedi címke.",
     img: tshirtImg,
     tags: ["szitanyomás", "DTF", "DTG", "egyedi címke"],
   },
   {
     n: "02",
     title: "Hoodie & Crewneck",
-    desc: "350+ g/m² minőség, hímzés vagy nyomás. Tour-pack és webshop drop.",
+    desc: "250+ g/m² minőség, hímzés vagy nyomás. Tour-pack és webshop drop.",
     img: hoodieImg,
-    tags: ["hímzés", "350gsm", "drop"],
+    tags: ["hímzés", "250gsm", "drop"],
   },
   {
     n: "03",
@@ -53,7 +54,7 @@ const products = [
   {
     n: "04",
     title: "Kiegészítők",
-    desc: "Öngyújtó, jelvény, kulcstartó, sörnyitó, törölköző, vászontáska — minden, ami fan-cucc.",
+    desc: "Öngyújtó, kitűző, kulcstartó, sörnyitó, törölköző, vászontáska — minden, ami fan-cucc.",
     img: accImg,
     tags: ["zippo", "pin", "tote", "kulcstartó", "törölköző", "sörnyitó", "matrica"],
   },
@@ -85,7 +86,21 @@ function Index() {
             <a href="#termekek" className="hover:text-primary transition">Termékek</a>
             <a href="#folyamat" className="hover:text-primary transition">Folyamat</a>
             <a href="#rolunk" className="hover:text-primary transition">Rólunk</a>
-            <a href="#webshop" className="hover:text-primary transition">Webshop</a>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button type="button" className="uppercase hover:text-primary transition">
+                  Webshop ▾
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="rounded-none border-foreground bg-background text-foreground">
+                <DropdownMenuItem asChild className="rounded-none font-mono text-xs uppercase">
+                  <a href="https://shop.morch.hu/">MÖRCH</a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="rounded-none font-mono text-xs uppercase">
+                  <a href="https://huvos.band/">HŰVÖS</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#kapcsolat" className="hover:text-primary transition">Kapcsolat</a>
           </nav>
           <a
@@ -106,7 +121,7 @@ function Index() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="font-mono text-xs uppercase text-accent mb-6 flex items-center gap-3">
             <span className="w-8 h-px bg-accent" />
-            EST. 2014 · BUDAPEST · DIY OR DIE
+            EST. 2026 · BUDAPEST
           </div>
           <h1 className="font-display text-[clamp(3.5rem,11vw,11rem)] leading-[0.85] uppercase">
             Merch, ami<br />
@@ -135,10 +150,10 @@ function Index() {
 
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border pt-8">
             {[
-              ["240+", "ZENEKAR"],
+              ["10+", "TERMÉK"],
               ["25 DB", "MIN. RENDELÉS"],
-              ["10 NAP", "ÁTFUTÁS"],
-              ["100%", "MAGYAR GYÁRTÁS"],
+              ["15 NAP", "ÁTFUTÁS"],
+              ["100%", "MAGYAR GYÁRTÓK"],
             ].map(([k, v]) => (
               <div key={v}>
                 <div className="font-display text-4xl md:text-5xl text-primary">{k}</div>
@@ -159,6 +174,8 @@ function Index() {
               "Hímzés",
               "★",
               "Koncertplakát",
+              "★",
+              "Nyomdai anyagok",
               "★",
               "Öngyújtó",
               "★",
@@ -185,8 +202,8 @@ function Index() {
             </h2>
           </div>
           <p className="font-mono text-sm text-muted-foreground max-w-sm">
-            Mindent egy helyen — a póló nyomásától a backstage öngyújtóig.
-            Nincs minimumár-szabás, nincs ügynöki sallang.
+            Mindent egy helyen — a koncertplakáttól a crew pólóig.
+            Nincs minimumár, csak a zenéd.
           </p>
         </div>
 
@@ -234,7 +251,7 @@ function Index() {
           <div className="font-mono text-xs uppercase text-primary mb-3">/ 02 — Folyamat</div>
           <h2 className="font-display text-6xl md:text-8xl uppercase leading-none mb-16">
             Négy lépés.<br />
-            <span className="text-primary">Zéró kamu.</span>
+            <span className="text-primary">Ötlettől a pultig.</span>
           </h2>
           <ol className="grid md:grid-cols-4 gap-px bg-border">
             {steps.map(([t, d], i) => (
@@ -321,7 +338,7 @@ function Index() {
                 ))}
               </ul>
               <a
-                href="#kapcsolat"
+                href="https://shop.morch.hu/"
                 className="inline-block font-mono text-xs uppercase border border-foreground px-6 py-3 hover:bg-foreground hover:text-background transition"
               >
                 Nézd meg a boltot →
@@ -384,12 +401,12 @@ function Index() {
           </div>
           <div className="space-y-6 font-mono">
             <a
-              href="mailto:info@morch.hu"
+              href="mailto:abraham.levente@morch.hu"
               className="block group border-y border-primary-foreground/30 py-6"
             >
               <div className="text-xs uppercase opacity-70">Email</div>
               <div className="font-display text-4xl md:text-5xl group-hover:text-accent transition">
-                info@morch.hu
+                abraham.levente@morch.hu
               </div>
             </a>
             <a
